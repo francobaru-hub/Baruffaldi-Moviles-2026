@@ -95,19 +95,33 @@ El `.` significa "todos los archivos y carpetas de la ubicación actual".
 
 ### `git commit`
 
-Guarda los cambios preparados en el historial del repositorio.
-
-```bash
-git commit -m "Descripción del cambio"
-```
-
-Ejemplo:
-
-```bash
-git commit -m "Agrega ejercicios de JavaScript"
-```
+Guarda los cambios que preparaste con `git add` en el historial local de Git.
 
 El mensaje debería explicar brevemente qué se modificó.
+
+**Estructura:**
+
+```bash
+git commit -m "tipo(alcance): asunto"
+```
+
+Para hacer un buen commit:
+
+- **Tipo:** indica qué cambio hiciste (`feat`, `fix`, `docs`, etc.).
+- **Alcance:** indica dónde hiciste el cambio.
+- **Asunto:** describe brevemente qué cambiaste.
+- Usá un **verbo en presente**: `agrega`, `corrige`, `actualiza`, `elimina`.
+- Debe ser **corto y claro**.
+
+**Ejemplos:**
+
+```bash
+git commit -m "feat(clase-03): agrega ejercicio de JavaScript"
+git commit -m "fix(clase-03): corrige cálculo del peaje"
+git commit -m "docs: actualiza README de la materia"
+```
+
+> **Importante:** `git commit` guarda el cambio **localmente**. Para subirlo a GitHub después usás `git push`.
 
 ---
 
@@ -168,35 +182,23 @@ git remote -v
 
 ## 8. Subir cambios a GitHub
 
-```md
-## `git commit` — Guardar cambios
 
-Guarda los cambios que preparaste con `git add` en el historial local de Git.
 
-**Estructura:**
+### `git push`
 
-```bash
-git commit -m "tipo(alcance): asunto"
-```
+Envía los commits del repositorio local a GitHub.
 
-Para hacer un buen commit:
-
-- **Tipo:** indica qué cambio hiciste (`feat`, `fix`, `docs`, etc.).
-- **Alcance:** indica dónde hiciste el cambio.
-- **Asunto:** describe brevemente qué cambiaste.
-- Usá un **verbo en presente**: `agrega`, `corrige`, `actualiza`, `elimina`.
-- Debe ser **corto y claro**.
-
-**Ejemplos:**
+La primera vez:
 
 ```bash
-git commit -m "feat(clase-03): agrega ejercicio de JavaScript"
-git commit -m "fix(clase-03): corrige cálculo del peaje"
-git commit -m "docs: actualiza README de la materia"
+git push -u origin master
 ```
 
-> **Importante:** `git commit` guarda el cambio **localmente**. Para subirlo a GitHub después usás `git push`.
+Después de configurar la rama remota:
 
+```bash
+git push
+```
 
 ---
 
@@ -351,7 +353,6 @@ Sube los commits a GitHub.
 
 ---
 
-
 # Regla fácil para recordar
 
 ```text
@@ -367,3 +368,5 @@ git push
       ↓
     GITHUB
 ```
+
+> **Importante:** `git commit` guarda los cambios en tu repositorio local. `git push` envía esos commits a GitHub.
