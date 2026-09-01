@@ -2,6 +2,22 @@
 
 Guía básica de Git para trabajar con los repositorios de la materia.
 
+# Comandos que conviene memorizar primero
+
+| Comando | ¿Para qué sirve? |
+|---|---|
+| `git status` | Ver el estado del repositorio |
+| `git add .` | Preparar todos los cambios |
+| `git commit -m "mensaje"` | Guardar cambios en el historial |
+| `git push` | Subir cambios a GitHub |
+| `git pull` | Descargar e integrar cambios de GitHub |
+| `git log --oneline` | Ver el historial resumido |
+| `git remote -v` | Ver el repositorio remoto |
+| `git diff` | Ver los cambios realizados |
+| `git fetch` | Actualizar información del repositorio remoto |
+| `git branch` | Ver las ramas |
+| `git switch` | Cambiar de rama |
+
 ---
 
 ## 1. Configuración inicial
@@ -321,56 +337,6 @@ Sube los commits a GitHub.
 
 ---
 
-# Ejemplo con una nueva clase
-
-Supongamos que creamos:
-
-```text
-Clase-04/
-├── ejercicio1.js
-├── ejercicio2.js
-└── README.md
-```
-
-Después de terminar:
-
-```bash
-git status
-```
-
-```bash
-git add .
-```
-
-```bash
-git commit -m "Agrega ejercicios de Clase-04"
-```
-
-```bash
-git push
-```
-
-Los cambios quedan guardados en el historial y enviados al repositorio de GitHub.
-
----
-
-# Comandos que conviene memorizar primero
-
-| Comando | ¿Para qué sirve? |
-|---|---|
-| `git status` | Ver el estado del repositorio |
-| `git add .` | Preparar todos los cambios |
-| `git commit -m "mensaje"` | Guardar cambios en el historial |
-| `git push` | Subir cambios a GitHub |
-| `git pull` | Descargar e integrar cambios de GitHub |
-| `git log --oneline` | Ver el historial resumido |
-| `git remote -v` | Ver el repositorio remoto |
-| `git diff` | Ver los cambios realizados |
-| `git fetch` | Actualizar información del repositorio remoto |
-| `git branch` | Ver las ramas |
-| `git switch` | Cambiar de rama |
-
----
 
 # Regla fácil para recordar
 
