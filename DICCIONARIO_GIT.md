@@ -55,7 +55,55 @@ Crea una carpeta oculta llamada `.git`, donde Git guarda la información del rep
 
 ---
 
-## 3. Ver el estado
+## 3.  Enlazar con GitHub
+
+### `git remote add origin`
+
+Enlaza la carpeta local con un repositorio de GitHub.
+
+**Comando:**
+
+```bash
+git remote add origin https://github.com/USUARIO/REPOSITORIO.git
+```
+Ejemplo:
+```bash
+git remote add origin https://github.com/francobaru-hub/Baruffaldi-Moviles-2026.git
+```
+Para comprobar si el repositorio quedó enlazado:
+```bash
+git remote -v
+```
+Debería aparecer:
+origin  https://github.com/USUARIO/REPOSITORIO.git (fetch)
+origin  https://github.com/USUARIO/REPOSITORIO.git (push)
+
+>Importante: este comando se hace normalmente una sola vez por proyecto.
+
+---
+
+## 4. Comprobar sesión de GitHub
+
+### `gh auth status` 
+Permite comprobar si estás conectado a tu cuenta de GitHub desde la consola.
+Comando:
+```bash
+gh auth status
+```
+Si estás conectado, mostrará información sobre tu cuenta y la autenticación.
+
+Para comprobar si GitHub CLI está instalado:
+```bash
+gh --version
+```
+
+>Importante: git remote add origin y gh auth status hacen cosas diferentes.
+- git remote add origin → enlaza el proyecto local con GitHub.
+- gh auth status → comprueba si tu cuenta de GitHub está autenticada en la consola.
+
+---
+
+## 5. Ver el estado
 
 ### `git status`
 
@@ -69,7 +117,7 @@ Es uno de los comandos más importantes para saber qué está pasando en el repo
 
 ---
 
-## 4. Agregar cambios
+## 6. Agregar cambios
 
 ### `git add`
 
@@ -91,7 +139,7 @@ El `.` significa "todos los archivos y carpetas de la ubicación actual".
 
 ---
 
-## 5. Guardar cambios
+## 7. Guardar cambios
 
 ### `git commit`
 
@@ -125,7 +173,7 @@ git commit -m "docs: actualiza README de la materia"
 
 ---
 
-## 6. Ver el historial
+## 8. Ver el historial
 
 ### `git log`
 
@@ -152,7 +200,7 @@ Los primeros caracteres identifican al commit.
 
 ---
 
-## 7. Conectar Git con GitHub
+## 9. Conectar Git con GitHub
 
 ### `git remote`
 
@@ -180,9 +228,7 @@ git remote -v
 
 ---
 
-## 8. Subir cambios a GitHub
-
-
+## 10. Subir cambios a GitHub
 
 ### `git push`
 
@@ -202,7 +248,7 @@ git push
 
 ---
 
-## 9. Descargar cambios de GitHub
+## 11. Descargar cambios de GitHub
 
 ### `git pull`
 
@@ -216,7 +262,7 @@ Se utiliza cuando el repositorio remoto tiene cambios que todavía no tenemos en
 
 ---
 
-## 10. Actualizar información remota
+## 12. Actualizar información remota
 
 ### `git fetch`
 
@@ -230,7 +276,7 @@ Es útil para comprobar qué cambios existen en GitHub antes de integrarlos.
 
 ---
 
-## 11. Ramas
+## 13. Ramas
 
 ### `git branch`
 
@@ -268,7 +314,7 @@ git switch -c nombre-rama
 
 ---
 
-## 12. Ver diferencias
+## 14. Ver diferencias
 
 ### `git diff`
 
@@ -282,7 +328,7 @@ Sirve para revisar qué cambió antes de hacer un commit.
 
 ---
 
-## 13. Eliminar archivos
+## 15. Eliminar archivos
 
 ### `git rm`
 
@@ -300,7 +346,7 @@ git commit -m "Elimina archivo innecesario"
 
 ---
 
-## 14. Deshacer cambios básicos
+## 16. Deshacer cambios básicos
 
 ### `git restore`
 
@@ -356,17 +402,17 @@ Sube los commits a GitHub.
 # Regla fácil para recordar
 
 ```text
-CAMBIO ARCHIVOS
-      ↓
-git status
-      ↓
+git init
+    ↓
+git remote add origin URL
+    ↓
 git add .
-      ↓
+    ↓
 git commit -m "mensaje"
-      ↓
+    ↓
 git push
-      ↓
-    GITHUB
+    ↓
+GitHub
 ```
 
 > **Importante:** `git commit` guarda los cambios en tu repositorio local. `git push` envía esos commits a GitHub.
