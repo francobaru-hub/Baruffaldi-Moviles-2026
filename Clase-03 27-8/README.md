@@ -61,3 +61,12 @@ Este recurso me ayudó a comprender mejor:
 
 También utilicé mi cerebro porque a veces el gaga de chat hace cualquier cosa, o tendría que aprender a formular buenos prompts 
 
+# Nota por Profesor Axel:
+
+Excelente Franco! Te dejé notas en todos los ejercicios, lo cual no quiere decir que estuvieran mal resueltos ni mucho menos. Si no por el contrario, para aportarte otra visión a la hora de encarar un problema lógico, y de la forma de escribir código actualmente en js.
+
+Leé cuando puedas todas las anotaciones que te dejé, cualquier duda podés consultarme en clase.
+
+En cuanto al README aquí escrito: Perfecto! buena documentación resumen de lo que hiciste, es lo mínimo que pido, y que además los va a ayudar a ustedes mismos a dejar asentado lo que hicieron (por más IA que hayan usado, imagino que leíste lo que escribiste jaja).
+
+
