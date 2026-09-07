@@ -27,6 +27,4 @@ Utilicé la extensión **Live Server** para correr `index.html` con el protocolo
 * Verificar que el `fetch` a la API de DummyJSON trajera los productos reales.
 * Comprobar que los favoritos persistieran en `localStorage` después de recargar con F5.
 
-## 4. Inteligencia natural
 
-También usé mi propio criterio para entender y poder explicar cada bloque, no solo copiar y pegar.
