@@ -10,7 +10,7 @@ Utilicé el **contenido teórico de la Clase 04** como material de consulta:
 * La carpeta `ejemplos-practicos/` que resuelve casos parecidos a los que pedía el proyecto y me sirvió de referencia para entender el patrón.
 * El `README.md` de la consigna, siguiendo bloque por bloque lo que pedía cada uno.
 
-## 2. Claude (Anthropic)
+## 2. Claude
 
 Utilicé **Claude** para:
 
@@ -26,5 +26,3 @@ Utilicé la extensión **Live Server** para correr `index.html` con el protocolo
 * Probar el modo oscuro, el buscador y los filtros en el navegador.
 * Verificar que el `fetch` a la API de DummyJSON trajera los productos reales.
 * Comprobar que los favoritos persistieran en `localStorage` después de recargar con F5.
-
-
