@@ -11,6 +11,7 @@ const FAVORITOS_KEY = "techstore_favoritos_v1";
  */
 export function obtenerFavoritos() {
     try {
+        // localStorage guarda datos en el navegador entre recargas de página.
         const raw = localStorage.getItem(FAVORITOS_KEY);
         return raw ? JSON.parse(raw) : [];
     } catch {
