@@ -342,7 +342,40 @@ Después:
 
 ```bash
 git commit -m "Elimina archivo innecesario"
+git push
 ```
+
+#### Si el archivo tiene cambios sin guardar
+
+Si el archivo en el disco quedó distinto al que se guardó en el último commit, `git rm` se niega a borrarlo:
+
+```text
+error: the following file has local modifications:
+    archivo.js
+(use --cached to keep the file, or -f to force removal)
+```
+
+Si igual lo querés borrar (no te importa perder esos cambios), forzás con `-f`:
+
+```bash
+git rm -f archivo.js
+git commit -m "elimina archivo.js"
+git push
+```
+
+#### Borrar un archivo o carpeta que NO está en el repositorio (untracked)
+
+Si nunca se agregó a git — aparece en `git status` bajo "Untracked files", o está ignorado por el `.gitignore` — `git rm` no aplica, porque no es algo que git esté siguiendo. Se borra con un comando normal del sistema, no de git:
+
+```bash
+# Git Bash / Linux / Mac
+rm -rf nombre-carpeta
+
+# PowerShell
+Remove-Item -Recurse -Force nombre-carpeta
+```
+
+> ⚠️ `rm -rf` y `Remove-Item -Recurse -Force` borran directo, sin pasar por la papelera. Fijate bien la ruta antes de ejecutar.
 
 ---
 
@@ -365,6 +398,31 @@ git restore --staged archivo.js
 ```
 
 Esto quita el archivo del `staging`, pero conserva sus cambios.
+
+Para sacar **todo** lo que quedó preparado (por ejemplo, después de un `git add .` que agarró más de lo que querías):
+
+```bash
+git restore --staged .
+```
+
+Deja todo "despreparado" otra vez, sin borrar ni modificar ningún archivo — solo saca del staging.
+
+#### Cuidado con `git add .` y carpetas que son otro repositorio
+
+Si adentro de tu repo tenés una carpeta que a su vez es OTRO repositorio git (tiene su propia carpeta `.git`, por ejemplo porque clonaste algo ahí dentro), `git add .` la va a agregar como "repositorio embebido" en vez de trackear sus archivos uno por uno:
+
+```text
+warning: adding embedded git repository: carpeta/subcarpeta
+hint: You've added another git repository inside your current repository.
+```
+
+Esto casi nunca es lo que querés. Si pasó sin querer:
+
+```bash
+git restore --staged .
+```
+
+Y si esa carpeta no tiene que estar en tu repo, borrala (ver sección 15) o agregala a tu `.gitignore` para que git directamente no la mire.
 
 ---
 
