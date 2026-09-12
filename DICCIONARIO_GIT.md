@@ -66,16 +66,22 @@ Enlaza la carpeta local con un repositorio de GitHub.
 ```bash
 git remote add origin https://github.com/USUARIO/REPOSITORIO.git
 ```
+
 Ejemplo:
+
 ```bash
 git remote add origin https://github.com/francobaru-hub/Baruffaldi-Moviles-2026.git
 ```
+
 Para comprobar si el repositorio quedó enlazado:
+
 ```bash
 git remote -v
 ```
+
 Debería aparecer:
 origin  https://github.com/USUARIO/REPOSITORIO.git (fetch)
+
 origin  https://github.com/USUARIO/REPOSITORIO.git (push)
 
 >Importante: este comando se hace normalmente una sola vez por proyecto.
@@ -85,20 +91,26 @@ origin  https://github.com/USUARIO/REPOSITORIO.git (push)
 ## 4. Comprobar sesión de GitHub
 
 ### `gh auth status` 
+
 Permite comprobar si estás conectado a tu cuenta de GitHub desde la consola.
 Comando:
+
 ```bash
 gh auth status
 ```
+
 Si estás conectado, mostrará información sobre tu cuenta y la autenticación.
 
 Para comprobar si GitHub CLI está instalado:
+
 ```bash
 gh --version
 ```
 
 >Importante: git remote add origin y gh auth status hacen cosas diferentes.
+
 - git remote add origin → enlaza el proyecto local con GitHub.
+
 - gh auth status → comprueba si tu cuenta de GitHub está autenticada en la consola.
 
 ---
